@@ -18,4 +18,6 @@ public class User {
     @Column(nullable = false)
     private String password;
     private List<String> roles;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<Note> notes;
 }
