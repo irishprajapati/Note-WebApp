@@ -18,5 +18,8 @@ public class Note {
     public String content;
 
     public LocalDateTime createdAt; // -> extended the localtime feature of spring
+    @ManyToOne
+    @JoinColumn(name="user_id")
+    private User user;
 
 }
